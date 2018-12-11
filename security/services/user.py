@@ -2,6 +2,7 @@
 from flask import Blueprint
 user_service = Blueprint('user_service',__name__)
 from  db.services.context import db_session
+
 from security.models.user import User ,returns_user
 
 @user_service.route("/user/by_id/<user_id>")
