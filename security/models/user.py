@@ -6,7 +6,9 @@ from functools import wraps
 class User(Base):
     __tablename__ = 'users'
     id = Column(Integer, primary_key=True)
-    name = Column(String(50), unique=True)
+    login = Column(String(50), unique=True)
+    password = Column(String(50))
+    name = Column(String(50) )
     email = Column(String(120), unique=True)
 
     def __init__(self, name=None, email=None):
@@ -23,6 +25,6 @@ def returns_user(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
         r = f(*args, **kwargs)
-        r = {'name' : r.name,'email' : r.email}
+        r = {'login':r.login,'name' : r.name,'email' : r.email}
         return r
     return decorated_function
