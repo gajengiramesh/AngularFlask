@@ -1,0 +1,10 @@
+word = "amazing"
+print("1")
+print(word[2:2])
+print("2")
+print(word[7:])
+print("3")
+print(word[-1:-4])
+print("4")
+print(word[-4:-1])
+print("5")
