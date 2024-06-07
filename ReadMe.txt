@@ -7,12 +7,14 @@ SQLite:
     creating sql dump from the db
     .dump C:\Working\dev\Python\FlaskResterExample\test_dbscript.sql
 
+cd /venv/SCripts/activate ( to activate the virtual env)
 Packages installed :
     pip install SQLAlchemy==1.4.49
     pip install Flask==2.3.1
     pip install marshmallow==3.18.0
-    pip install coverage
-    pip install Flask-JWT-Extended
+    pip install coverage==7.5.3
+    pip install Flask-JWT-Extended==4.6.0
+    pip install flask-compress==1.15
 
 
 Running the programme
